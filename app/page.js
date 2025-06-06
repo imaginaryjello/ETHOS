@@ -5,12 +5,12 @@ import { Product, FooterBanner, HeroBanner } from "../components";
 
 export default function Home() {
   return (
-    <>
-      HeroBanner
+    <div>
+      <HeroBanner />
       <div className="justify-center items-center text-center">
         <h1 className="text-5xl font-bold">Welcome to Our Store</h1>
         <h2 className="text-3xl font-extrabold">Best Selling Products</h2>
-        <p class="text-base text-gray-600">
+        <p className="text-base text-gray-600">
           Check out our best selling products below.
         </p>
       </div>
@@ -18,6 +18,6 @@ export default function Home() {
         {["Product 1", "Product 2", "Product 3"].map((product) => product)}
       </div>
       <FooterBanner />
-    </>
+    </div>
   );
 }
