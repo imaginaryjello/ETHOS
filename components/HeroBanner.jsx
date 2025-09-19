@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { urlFor } from "@/lib/client";
+import { urlFor } from "./sanityImageUrl";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-10 sm:py-16 lg:py-20 bg-[#F0EADC] bg-cover  relative min-h-[400px] sm:min-h-[500px] overflow-hidden ">
+    <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-10 sm:py-16 lg:py-20 bg-amber-500 bg-cover  relative min-h-[400px] sm:min-h-[500px] overflow-hidden ">
       <div>
         {/* <img
           className="absolute inset top-0 left-0 object-cover opacity-20"
@@ -23,7 +23,7 @@ const HeroBanner = ({ heroBanner }) => {
         </h1>
         <div className="absolute inset-0 z-0 flex justify-end items-center pr-48">
           <img
-            src={urlFor(heroBanner.image).url()}
+            src={urlFor(heroBanner.image)}
             alt="Hero image"
             className="h-full w-auto py-5 object-contain  object-right"
             // className="absolute opacity-90 z-0 top-0 right-4 sm:right-[10%] w-[200px] sm:w-[300px] lg:w-[450px] lg:mb-5 h-auto object-center"

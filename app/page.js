@@ -1,5 +1,3 @@
-"use client";
-
 // app/page.js
 
 import React from "react";
@@ -17,10 +15,6 @@ export default async function Home() {
   return (
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      {console.log("Banner Data:", bannerData)}
-      <div>
-        <img src="../public/hempbag.jpg"></img>
-      </div>
       <div className="justify-center items-center text-center">
         <h1 className="text-5xl font-bold">Welcome to Our Store</h1>
         <h2 className="text-3xl font-extrabold">Best Selling Products</h2>
@@ -28,13 +22,12 @@ export default async function Home() {
           Check out our best selling products below.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 p-4 sm:p-8 md:p-16 lg:p-24">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>
-
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData.length && bannerData[0]} />
     </div>
   );
 }
